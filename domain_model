@@ -1,0 +1,28 @@
+User stories:
+
+Users:
+- can sign up, sign in and sign out
+- have a profile displaying username and profile photo
+- can upload photos to their profile
+-- photos display time uploaded and description
+- can view other profiles
+- can comment on photos
+- can like photos
+
+Objects/models:
+- Users
+- Likes
+- Comments
+- Photos
+
+Associations:
+
+- Users have many: Photos, comments, likes
+- Photos have many: Comments, likes
+- Comments have one: user, photo
+- Likes have one: user, photo
+
+Tech:
+- Devise for user authentication
+- Amazon S3 for image storage
+- Bootstrap for display
