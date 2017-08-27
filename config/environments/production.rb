@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.paperclip_defaults = {
+config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
       bucket: ENV.fetch('S3_BUCKET_NAME'),
@@ -9,6 +9,8 @@ Rails.application.configure do
     }
   }
   # Settings specified here will take precedence over those in config/application.rb.
+  # More meaningful error pages
+  config.consider_all_requests_local = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
