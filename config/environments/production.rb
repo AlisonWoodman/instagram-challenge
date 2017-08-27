@@ -8,6 +8,8 @@ config.paperclip_defaults = {
       access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
     }
   }
+
+  config.paperclip_defaults = { s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com", }
   # Settings specified here will take precedence over those in config/application.rb.
   # More meaningful error pages
   config.consider_all_requests_local = true
