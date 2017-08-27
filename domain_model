@@ -5,7 +5,7 @@ Users:
 - have a profile displaying username and profile photo
 - can upload photos to their profile
 -- photos display time uploaded and description
-- can view other profiles
+- can view other profiles (other profiles are listed on a users page)
 - can comment on photos
 - can like photos
 
