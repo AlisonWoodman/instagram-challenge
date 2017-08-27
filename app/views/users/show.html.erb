@@ -1,5 +1,6 @@
 <div class="user-profile">
   <h2>Your profile</h2>
-  <p><%= current_user.username %></p>
-  <p><%= current_user.bio %></p>
+  <p><%= @user.username %></p>
+  <div><%= image_tag(@user.avatar.url(:square)) %></div>
+  <p><%= @user.bio %></p>
 </div>
