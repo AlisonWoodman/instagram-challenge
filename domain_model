@@ -26,3 +26,8 @@ Tech:
 - Devise for user authentication
 - Amazon S3 for image storage
 - Bootstrap for display
+
+To do:
+- Controller test for posts
+- Controller test for users
+- navbar

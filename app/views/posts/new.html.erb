@@ -1,0 +1,10 @@
+<h2>Post your snap!</h2>
+<%= form_for :post, url: {controller: "posts", action: "create"} do |form| %>
+  <p><%= form.label :description, "What is this?" %>
+    <%= form.text_field :description %>
+  </p>
+  <p>
+  	<%= form.file_field :image %>
+	</p>
+  <%= form.submit "Submit" %>
+<% end %>

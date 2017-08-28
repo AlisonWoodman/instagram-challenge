@@ -1,6 +1,18 @@
 <div class="user-profile">
   <h2>Your profile</h2>
   <p><%= @user.username %></p>
-  <div><%= image_tag(@user.avatar.url(:square)) %></div>
+  <div><%= image_tag(@user.avatar.url(:thumb)) %></div>
   <p><%= @user.bio %></p>
+  <p><%= link_to "Post a new snap", new_user_post_url(current_user) %></p>
+
+  <div>
+    <h3>Your photos</h3>
+    <% if @user.posts %>
+      <% @user.posts.each do |post| %>
+        <%= image_tag(post.image.url(:square)) %>
+        <%= post.description %>
+        posted at: <%= post.created_at %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
